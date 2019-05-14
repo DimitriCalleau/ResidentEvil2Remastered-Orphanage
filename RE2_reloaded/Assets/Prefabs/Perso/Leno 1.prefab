@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2301978138190020471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1438652429844221421}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5922382131847955648}
+  m_Layer: 0
+  m_Name: Pistolet (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5922382131847955648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1438652429844221421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301978138190020471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2438308505671517140}
+  m_Father: {fileID: 8112907999538862537}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3833647582247647164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1438652429844221421}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2438308505671517140}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2438308505671517140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3612311767658745401, guid: 0a237a6a9abb86040b0bbf5b205452fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1438652429844221421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3833647582247647164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5922382131847955648}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8112907997944136194
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8112907998551958081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0293393, y: 1.94, z: 2.459047}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.8, z: 1}
   m_Children:
   - {fileID: 8112907998284614319}
@@ -276,7 +338,7 @@ Transform:
   m_LocalPosition: {x: 0.413, y: 0.292, z: 0.492}
   m_LocalScale: {x: 0.1535234, y: 0.08529078, z: 0.6753341}
   m_Children:
-  - {fileID: 2438308505671517140}
+  - {fileID: 5922382131847955648}
   m_Father: {fileID: 8112907998839239719}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -345,21 +407,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8112907999538862537}
     m_Modifications:
-    - target: {fileID: -7549717859602214969, guid: 0a237a6a9abb86040b0bbf5b205452fe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800280925747359683, guid: 0a237a6a9abb86040b0bbf5b205452fe,
-        type: 3}
-      propertyPath: m_Name
-      value: Pistolet
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800280925747359683, guid: 0a237a6a9abb86040b0bbf5b205452fe,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3612311767658745401, guid: 0a237a6a9abb86040b0bbf5b205452fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -435,11 +482,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.003
       objectReference: {fileID: 0}
+    - target: {fileID: 7800280925747359683, guid: 0a237a6a9abb86040b0bbf5b205452fe,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistolet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800280925747359683, guid: 0a237a6a9abb86040b0bbf5b205452fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7549717859602214969, guid: 0a237a6a9abb86040b0bbf5b205452fe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a237a6a9abb86040b0bbf5b205452fe, type: 3}
---- !u!4 &2438308505671517140 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3612311767658745401, guid: 0a237a6a9abb86040b0bbf5b205452fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1438652429844221421}
-  m_PrefabAsset: {fileID: 0}
