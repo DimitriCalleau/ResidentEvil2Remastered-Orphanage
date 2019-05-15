@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3517280445682582103}
   - component: {fileID: 5110887608144190015}
   - component: {fileID: 4467033231930846940}
-  - component: {fileID: 4032028237679599666}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -79,19 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4032028237679599666
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092480587817656254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.08000183, y: 0.1705631, z: 0.25739098}
-  m_Center: {x: 0.0043907166, y: -0.41471845, z: -0.000027656555}
 --- !u!1001 &2718252933947522959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,7 +98,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 907caa5fb7f3aad42a3e75995001f2ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 907caa5fb7f3aad42a3e75995001f2ee,
         type: 3}
