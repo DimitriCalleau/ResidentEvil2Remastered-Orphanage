@@ -8,23 +8,34 @@ public class OuverturePorte : MonoBehaviour
     private bool isOpenedLeft;
     private bool detectRight;
     private bool detectLeft;
+    public Animator animator;
+    public float time;
+    public float timer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        time = 0.25f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
+        if(timer <= 0)
+        {
+            timer = 0;
+        }
+
         RaycastHit hit;
-        Ray rightRay = new Ray(transform.position, Vector3.right);
-        Ray leftRay = new Ray(transform.position, Vector3.left);
+        Ray rightRay = new Ray(transform.position, Vector3.back);
+        Ray leftRay = new Ray(transform.position, Vector3.forward);
         if(Physics.Raycast(rightRay, out hit))
         {
             if (hit.collider.tag == "Player")
             {
                 detectRight = true;
+                Debug.Log("bof ");
+
             }
             else
             {
@@ -42,7 +53,7 @@ public class OuverturePorte : MonoBehaviour
                 detectLeft = false;
             }
         }
-
+        Debug.DrawRay(transform.position, Vector3.forward, Color.red);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,12 +62,26 @@ public class OuverturePorte : MonoBehaviour
         {
             if (detectRight == true)
             {
-
+                animator.SetBool("OpenRight", true);
             }
             
             if (detectLeft == true)
             {
+                animator.SetBool("OpenLeft", true);
+            }
+        }
+        else
+        {
+            animator.SetBool("OpenRight", false);
+            animator.SetBool("OpenLeft", false);
+            animator.SetBool("CloseLeft", true);
+            animator.SetBool("CloseRight", true);
+            timer += time;
 
+            if(timer <= 0)
+            {
+                animator.SetBool("CloseLeft", false);
+                animator.SetBool("CloseRight", false);
             }
         }
     }
