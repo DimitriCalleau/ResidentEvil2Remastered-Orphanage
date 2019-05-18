@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OuverturePorte : MonoBehaviour
 {
+    private Vector3 positionRay;
     private bool isOpenedRight;
     private bool isOpenedLeft;
     private bool detectRight;
@@ -11,41 +12,48 @@ public class OuverturePorte : MonoBehaviour
     public Animator animator;
     public float time;
     public float timer;
+
     // Start is called before the first frame update
     void Start()
     {
         time = 0.25f;
+        positionRay = new Vector3(-0.45f, 1, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
+    
         timer -= Time.deltaTime;
         if(timer <= 0)
         {
             timer = 0;
         }
+        //Debug.Log(timer);
 
-        RaycastHit hit;
-        Ray rightRay = new Ray(transform.position, Vector3.back);
-        Ray leftRay = new Ray(transform.position, Vector3.forward);
-        if(Physics.Raycast(rightRay, out hit))
+        RaycastHit hit1;
+        RaycastHit hit2;
+        Ray rightRay = new Ray(transform.position, transform.TransformDirection(Vector3.back));
+        Ray leftRay = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
+
+        if (Physics.Raycast(rightRay, out hit1, Mathf.Infinity))
         {
-            if (hit.collider.tag == "Player")
+           
+            if (hit1.collider.tag == "Player")
             {
+                Debug.Log("bof");
                 detectRight = true;
-                Debug.Log("bof ");
-
             }
             else
             {
                 detectRight = false;
             }
         }
-        if (Physics.Raycast(leftRay, out hit))
+        if (Physics.Raycast(leftRay, out hit2, Mathf.Infinity))
         {
-            if (hit.collider.tag == "Player")
+            if (hit2.collider.tag == "Player")
             {
+                Debug.Log("bof");
                 detectLeft = true;
             }
             else
@@ -53,7 +61,8 @@ public class OuverturePorte : MonoBehaviour
                 detectLeft = false;
             }
         }
-        Debug.DrawRay(transform.position, Vector3.forward, Color.red);
+        Debug.DrawRay(transform.position+positionRay,transform.TransformDirection( Vector3.forward), Color.red);
+        Debug.DrawRay(transform.position+positionRay, transform.TransformDirection(Vector3.back ), Color.red);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -70,7 +79,7 @@ public class OuverturePorte : MonoBehaviour
                 animator.SetBool("OpenLeft", true);
             }
         }
-        else
+        /*else
         {
             animator.SetBool("OpenRight", false);
             animator.SetBool("OpenLeft", false);
@@ -83,7 +92,7 @@ public class OuverturePorte : MonoBehaviour
                 animator.SetBool("CloseLeft", false);
                 animator.SetBool("CloseRight", false);
             }
-        }
+        }*/
     }
 } 
 
