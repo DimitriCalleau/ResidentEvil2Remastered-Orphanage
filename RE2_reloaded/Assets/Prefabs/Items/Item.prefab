@@ -166,7 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175a537a81181ca4fb6743a5057941c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerposition: {fileID: 0}
+  playerposition: {fileID: 8112907998839239719, guid: 89ac1549e5b71164b96ce436c540b75d,
+    type: 3}
   Interractable: {fileID: 9060697327515093113}
   Pickable: {fileID: 9060697326885103744}
 --- !u!1 &9060697327515093113
