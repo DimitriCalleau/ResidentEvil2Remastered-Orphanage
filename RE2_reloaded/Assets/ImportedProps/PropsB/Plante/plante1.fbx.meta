@@ -3,7 +3,12 @@ guid: 9554670a24fb5574a851d41082c19f95
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palmPotted2FlowerShader
+    second: {fileID: 2100000, guid: eef0ac267130c194ab3bc68b5f3450e5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
