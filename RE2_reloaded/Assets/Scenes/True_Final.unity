@@ -23841,7 +23841,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 9.1837e-41, z: NaN, w: 2.35e-43}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -102632,12 +102632,12 @@ PrefabInstance:
     - target: {fileID: 111539634372865803, guid: d125205123f607942b093fffd2e21b43,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: 0.418
       objectReference: {fileID: 0}
     - target: {fileID: 111539634372865803, guid: d125205123f607942b093fffd2e21b43,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.595
+      value: 26.405
       objectReference: {fileID: 0}
     - target: {fileID: 111539634372865803, guid: d125205123f607942b093fffd2e21b43,
         type: 3}
